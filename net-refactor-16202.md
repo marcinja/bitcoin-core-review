@@ -30,3 +30,19 @@ Adds V1TransportDeserializer
 
 hmm last night I was confused at how `m_deserializer->Read` was getting
 everything. its in a while loop: while there are bytes remaining
+
+## Review Club homework
+
+1: I will ACK
+
+2. this PR is an essential step to getting p2p message v2. adding v2 will now mean just
+   adding a V2TransportDeserializer
+
+3. the first commit splits up deserialization of messages from CNode's message
+   container
+
+4. answered above
+
+5. The Adapter pattern AKA a Wrapper acts as a translation layer between 2
+   incompatible interfaces. In this case V2 transport will not be directly
+   deserializable into CNetMessage.
